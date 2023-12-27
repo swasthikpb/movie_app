@@ -6,7 +6,9 @@ import React from 'react'
 
 const CustomPagination = ({setPage,numOfPages=10}) => {
 
-    const handlePageChange =(page)=>{
+    const handlePageChange =(event,page)=>{
+      // console.log(event);
+      // console.log(page);
         setPage(page);
         window.scroll(0,0);
     }
@@ -23,10 +25,8 @@ const CustomPagination = ({setPage,numOfPages=10}) => {
         count={numOfPages} 
         shape='rounded'
         color='secondary'
-        
-        
-         onChange={(e)=>handlePageChange(e.target.textContent)}/>
-        
+        //  onChange={(e)=>handlePageChange(e.target.textContent)}/>
+        onChange={(event, page) => handlePageChange(event, page)} />
          </div>
   )
 }
