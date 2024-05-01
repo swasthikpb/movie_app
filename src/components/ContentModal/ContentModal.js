@@ -56,7 +56,7 @@ export default function Dialog({ children, media_type, id }) {
     );
 
     // console.log(data.results[0]?.key)
-    setVideo(data.results[0]?.key);
+    setVideo(data?.results[0]?.key);
   };
   useEffect(() => {
     fetchData();

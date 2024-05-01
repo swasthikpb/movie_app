@@ -32,8 +32,8 @@ const fetchSearch=async()=>{
     }&language=en-US&query=${searchText}&page=${page}&include_adult=false`
 
   );
-setContent(data.results);
-setNumOfPages(data.total_pages);
+setContent(data?.results);
+setNumOfPages(data?.total_pages);
 };
 
 useEffect(() => {
